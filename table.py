@@ -28,4 +28,4 @@ class Contact(Base):
                "PHONE_NUMBER='%s', EMAIL='%s', ADDRESS='%s')>" % (
                    self.FULLNAME, self.NICKNAME, self.OCCUPATION, self.PHONE_NUMBER, self.EMAIL, self.ADDRESS)
 
-# Base.metadata.create_all(engine)
+    Base.metadata.create_all(engine)

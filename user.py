@@ -20,7 +20,11 @@ class User:
         self.session.commit()
 
     def update_contact(self):
-        pass
+        user_fullname = str(input("INPUT FULLNAME: ").upper())
+        user_phone_number = str(input("INPUT PHONE NUMBER: "))
+        self.session.query(table.Contact).filter(table.Contact.FULLNAME == user_fullname)\
+            .update({'PHONE_NUMBER': user_phone_number})
+        self.session.commit()
 
     def delete_contact(self):
         user_fullname = str(input("INPUT FULLNAME: ").upper())
@@ -29,4 +33,5 @@ class User:
 
     def get_contact(self):
         contact = self.session.query(table.Contact).all()
-        print(contact)
+        for i in contact:
+            print(i, end='\n')

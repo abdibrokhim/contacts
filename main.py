@@ -10,5 +10,6 @@ def main():
 
 
 if __name__ == '__main__':
+    # UNCOMMENT FOR THE FIRST USAGE
     # table.update_table()
     main()
